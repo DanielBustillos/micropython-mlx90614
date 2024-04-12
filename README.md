@@ -20,7 +20,7 @@ $ ampy put mlx90614.py
 import mlx90614
 from machine import I2C, Pin
 
-i2c = I2C(scl=Pin(5), sda=Pin(4))
+i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
 sensor = mlx90614.MLX90614(i2c)
 
 print(sensor.read_ambient_temp())
@@ -36,7 +36,7 @@ import time
 import mlx90614
 from machine import I2C, Pin
 
-i2c = I2C(scl=Pin(5), sda=Pin(4))
+i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
 sensor = mlx90614.MLX90614(i2c)
 
 while True:
